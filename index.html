@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume Builder</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+<h1>Resume Builder</h1>
+<form id="resumeForm">
+<div class="form-group">
+<label for="profilePic">Profile Picture</label>
+<input type="file" id="profilePic" name="profilePic" accept="image/*">
+</div>
+<div class="form-group">
+<label for="name">Full Name</label>
+<input type="text" id="name" name="name" placeholder="Enter your full name">
+</div>
+<div class="form-group">
+<label for="fatherName">Father's Name</label>
+<input type="text" id="fatherName" name="fatherName" placeholder="Enter your father's name">
+</div>
+<div class="form-group">
+<label for="cast">Cast</label>
+<input type="text" id="cast" name="cast" placeholder="Enter your cast">
+</div>
+<div class="form-group">
+<label for="cnic">CNIC</label>
+<input type="text" id="cnic" name="cnic" placeholder="Enter your CNIC">
+</div>
+<div class="form-group">
+<label for="dob">Date of Birth</label>
+<input type="date" id="dob" name="dob">
+</div>
+<div class="form-group">
+<label for="email">Email Address</label>
+<input type="email" id="email" name="email" placeholder="Enter your email address">
+</div>
+<div class="form-group">
+<label for="phone">Phone Number</label>
+<input type="text" id="phone" name="phone" placeholder="Enter your phone number">
+</div>
+<div class="form-group">
+<label for="address">Address</label>
+<input type="text" id="address" name="address" placeholder="Enter your address">
+</div>
+<div class="form-group">
+<label for="education">Education</label>
+<div>
+<label>Matriculation</label>
+<input type="text" id="matricDegree" name="matricDegree" placeholder="Degree Title">
+<input type="number" id="matricFromYear" name="matricFromYear" placeholder="From Year">
+<input type="number" id="matricToYear" name="matricToYear" placeholder="To Year">
+</div>
+<div>
+<label>Intermediate</label>
+<input type="text" id="intermediateDegree" name="intermediateDegree" placeholder="Degree Title">
+<input type="number" id="intermediateFromYear" name="intermediateFromYear" placeholder="From Year">
+<input type="number" id="intermediateToYear" name="intermediateToYear" placeholder="To Year">
+</div>
+<div>
+<label>Bachelor's Degree</label>
+<input type="text" id="bachelorDegree" name="bachelorDegree" placeholder="Degree Title">
+<input type="number" id="bachelorFromYear" name="bachelorFromYear" placeholder="From Year">
+<input type="number" id="bachelorToYear" name="bachelorToYear" placeholder="To Year">
+</div>
+</div>
+<div class="form-group">
+<label for="currentlyEnrolled">Currently Enrolled</label>
+<input type="text" id="currentlyEnrolled" name="currentlyEnrolled" placeholder="Enter your current enrollment (optional)">
+</div>
+<div class="form-group">
+<label for="skills">Skills</label>
+<textarea id="skills" name="skills" placeholder="Enter your skills"></textarea>
+</div>
+<div class="form-group">
+<label for="experience">Work Experience</label>
+<textarea id="experience" name="experience" placeholder="Enter your work experience"></textarea>
+</div>
+<button type="submit" class="btn">Generate Resume</button>
+</form>
+
+<div id="resumePreview" class="resume-preview" style="display:none;">
+<h2>Resume Preview</h2>
+<div class="section">
+<h3>Profile Picture</h3>
+<img id="previewProfilePic" class="profile-img" src="" alt="Profile Picture">
+</div>
+<div class="section">
+<h3>Personal Information</h3>
+<p><span>Name:</span> <span id="previewName"></span></p>
+<p><span>Father's Name:</span> <span id="previewFatherName"></span></p>
+<p><span>Cast:</span> <span id="previewCast"></span></p>
+<p><span>CNIC:</span> <span id="previewCnic"></span></p>
+<p><span>Date of Birth:</span> <span id="previewDob"></span></p>
+<p><span>Email:</span> <span id="previewEmail"></span></p>
+<p><span>Phone:</span> <span id="previewPhone"></span></p>
+<p><span>Address:</span> <span id="previewAddress"></span></p>
+</div>
+<div class="section">
+<h3>Education</h3>
+<p><span>Matriculation:</span> <span id="previewMatricDegree"></span> from <span id="previewMatricFromYear"></span> to <span id="previewMatricToYear"></span></p>
+<p><span>Intermediate:</span> <span id="previewIntermediateDegree"></span> from <span id="previewIntermediateFromYear"></span> to <span id="previewIntermediateToYear"></span></p>
+<p><span>Bachelor's Degree:</span> <span id="previewBachelorDegree"></span> from <span id="previewBachelorFromYear"></span> to <span id="previewBachelorToYear"></span></p>
+</div>
+<div class="section">
+<h3>Currently Enrolled</h3>
+<p id="previewCurrentlyEnrolled"></p>
+</div>
+<div class="section">
+<h3>Skills</h3>
+<p id="previewSkills"></p>
+</div>
+<div class="section">
+<h3>Work Experience</h3>
+<p id="previewExperience"></p>
+</div>
+<button onclick="downloadResume()" class="btn">Download Resume</button>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
